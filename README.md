@@ -1,5 +1,7 @@
 # VdmHealthcheckBundle
 
+[![Build Status](https://travis-ci.org/3slab/VdmHealthcheckBundle.svg?branch=master)](https://travis-ci.org/3slab/VdmHealthcheckBundle)
+
 This bundle provides all the tooling to implement simple healthcheck functionnality.
 
 ## Installation
