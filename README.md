@@ -70,5 +70,6 @@ vdm_healthcheck:
 ## Checker's types
 
 * [Doctrine DBAL](./Resources/doc/checkers/dbal.md)
+* [HTTP](./Resources/doc/checkers/http.md)
 
 You can also [create your own checker](./Resources/doc/create_your_own_checker.md)
