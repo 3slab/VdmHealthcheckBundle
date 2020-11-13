@@ -1,0 +1,19 @@
+parameters:
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Vdm\Bundle\HealthcheckBundle\:
+        resource: '../../*'
+        exclude: '../../{Entity,Healthcheck,Controller,Tests,vendor,var,VdmHealthcheckBundle.php}'
+
+    Vdm\Bundle\HealthcheckBundle\Controller\:
+        resource: '../../Controller'
+        arguments: ['%vdm_healthcheck.secret%']
+        tags: ['controller.service_arguments']
+        bind:
+            $livenessManager: '@vdm_healthcheck.manager.liveness_manager'
+            $readinessManager: '@vdm_healthcheck.manager.readiness_manager'

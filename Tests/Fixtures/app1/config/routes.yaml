@@ -1,0 +1,3 @@
+vdm_healthcheck:
+  resource: "@VdmHealthcheckBundle/Resources/config/routing.yml"
+  prefix:   /

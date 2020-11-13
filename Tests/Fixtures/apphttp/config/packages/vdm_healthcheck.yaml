@@ -1,0 +1,16 @@
+vdm_healthcheck:
+  secret: mycustomsecret
+  liveness_path: /customlivenesspath
+  liveness_checkers:
+    http_up:
+      type: http
+      arguments:
+        - 'GET'
+        - 'http://vdmtest.local/success'
+  readiness_path: /customreadinesspath
+  readiness_checkers:
+    http_down:
+      type: http
+      arguments:
+        - 'POST'
+        - 'http://vdmtest.local/error'

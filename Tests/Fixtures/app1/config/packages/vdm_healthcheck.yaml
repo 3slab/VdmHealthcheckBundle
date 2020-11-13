@@ -1,0 +1,24 @@
+vdm_healthcheck:
+  liveness_checkers:
+    always_true1:
+      type: always_true
+      arguments:
+        - '%kernel.debug%'
+        - '@argument_resolver.controller_locator'
+    always_true2:
+      type: always_true
+    always_true3:
+      type: always_true
+  readiness_checkers:
+    always_true1:
+      type: always_true
+      arguments:
+        - '%kernel.default_locale%'
+    always_false1:
+      type: always_false
+      arguments:
+        - 'BDD_DOWN'
+    always_false2:
+      type: always_false
+      arguments:
+        - 'UNKNOWN_SERVICE'

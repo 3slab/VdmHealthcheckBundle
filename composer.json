@@ -1,0 +1,41 @@
+{
+  "name": "3slab/vdm-healthcheck-bundle",
+  "description": "Provide a simple healthcheck endpoint that checks dependencies too",
+  "type": "symfony-bundle",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Jonathan Bouzekri",
+      "email": "jonathan.bouzekri@suez.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Vdm\\Bundle\\HealthcheckBundle\\": ""
+    }
+  },
+  "require": {
+    "php": ">=7.2",
+    "symfony/framework-bundle": "^5.0",
+    "symfony/yaml": "^5.0",
+    "symfony/serializer": "^5.0",
+    "symfony/property-access": "^5.0"
+  },
+  "suggest": {
+    "doctrine/dbal": "check a connection to an sql database",
+    "symfony/http-client": "check a dependent http service is up"
+  },
+  "require-dev": {
+    "ext-xml": "*",
+    "ext-json": "*",
+    "ext-curl": "*",
+    "ext-mbstring": "*",
+    "ext-sqlite3": "*",
+    "phpunit/phpunit": "^9",
+    "squizlabs/php_codesniffer": "3.*",
+    "doctrine/doctrine-bundle": "^2.1",
+    "symfony/browser-kit": "^5.0",
+    "symfony/css-selector": "^5.0",
+    "symfony/http-client": "^5.0"
+  }
+}

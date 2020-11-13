@@ -1,0 +1,6 @@
+services:
+  Vdm\Bundle\HealthcheckBundle\Tests\Fixtures\AppBundle\Checker\AlwaysTrueCheckerFactory:
+    tags: ['vdm_healthcheck.checker_factory']
+
+  Vdm\Bundle\HealthcheckBundle\Tests\Fixtures\AppBundle\Checker\AlwaysFalseCheckerFactory:
+    tags: ['vdm_healthcheck.checker_factory']

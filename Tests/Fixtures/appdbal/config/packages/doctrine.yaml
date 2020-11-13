@@ -1,0 +1,12 @@
+doctrine:
+  dbal:
+    default_connection: default
+    connections:
+      default:
+        url: 'sqlite:///%kernel.project_dir%/var/app.db'
+      customer:
+        dbname:         customer
+        user:           root
+        password:       null
+        host:           unkownhost.youcannot.find.itatall
+        server_version: '5.7'

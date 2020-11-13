@@ -1,0 +1,7 @@
+vdm_healthcheck_liveness:
+    path:     "%vdm_healthcheck.liveness_path%"
+    defaults: { _controller: Vdm\Bundle\HealthcheckBundle\Controller\HealthController::liveness }
+
+vdm_healthcheck_readiness:
+    path:     "%vdm_healthcheck.readiness_path%"
+    defaults: { _controller: Vdm\Bundle\HealthcheckBundle\Controller\HealthController::readiness }

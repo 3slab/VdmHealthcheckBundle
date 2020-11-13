@@ -1,0 +1,6 @@
+vendor/
+var/
+Tests/Fixtures/**/var/
+.idea/
+composer.lock
+.phpunit*

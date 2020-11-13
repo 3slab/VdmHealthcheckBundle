@@ -1,0 +1,9 @@
+services:
+  logger:
+    class: Psr\Log\NullLogger
+
+  Symfony\Contracts\HttpClient\HttpClientInterface: '@vdm.test.appbundle.httpclient.mock'
+
+  vdm.test.appbundle.httpclient.mock:
+    class: Vdm\Bundle\HealthcheckBundle\Tests\Fixtures\AppBundle\Services\VdmMockHttpClient
+
