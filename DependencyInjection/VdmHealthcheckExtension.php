@@ -52,6 +52,13 @@ class VdmHealthcheckExtension extends ConfigurableExtension
         ) {
             $loader->load('./checker/http.yml');
         }
+
+        if (
+            $this->isCheckerTypeEnabled('odm', $mergedConfig['readiness_checkers'])
+            || $this->isCheckerTypeEnabled('odm', $mergedConfig['liveness_checkers'])
+        ) {
+            $loader->load('./checker/odm.yml');
+        }
     }
 
     /**
