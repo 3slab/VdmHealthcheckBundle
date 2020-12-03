@@ -1,0 +1,11 @@
+parameters:
+
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+
+  Vdm\Bundle\HealthcheckBundle\Healthcheck\Checker\Odm\:
+    resource: '../../../Healthcheck/Checker/Odm/*'
