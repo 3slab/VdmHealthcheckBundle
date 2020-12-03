@@ -23,6 +23,7 @@
   },
   "suggest": {
     "doctrine/dbal": "check a connection to an sql database",
+    "doctrine/mongodb-odm-bundle": "check a connection to a mongo database with doctrine odm",
     "symfony/http-client": "check a dependent http service is up"
   },
   "require-dev": {
@@ -34,7 +35,6 @@
     "phpunit/phpunit": "^8",
     "squizlabs/php_codesniffer": "3.*",
     "doctrine/doctrine-bundle": "^2.1",
-    "doctrine/mongodb-odm-bundle": "^4.2",
     "symfony/browser-kit": "^5.0",
     "symfony/css-selector": "^5.0",
     "symfony/http-client": "^5.0"

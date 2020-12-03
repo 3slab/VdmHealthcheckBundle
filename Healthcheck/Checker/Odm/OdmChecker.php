@@ -22,7 +22,7 @@ class OdmChecker extends AbstractChecker
     /**
      * OdmChecker constructor.
      * @param Client $client
-     *
+     * @param Configuration $configuration
      */
     public function __construct(Client $client, Configuration $configuration)
     {

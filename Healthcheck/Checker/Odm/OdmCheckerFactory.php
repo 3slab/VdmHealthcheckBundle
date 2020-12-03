@@ -33,7 +33,7 @@ class OdmCheckerFactory extends AbstractCheckerFactory
         }
 
         if (count($config->getArguments()) !== 2) {
-            throw new HealthcheckFactoryInvalidConfigurationException('odm checker only supports one argument');
+            throw new HealthcheckFactoryInvalidConfigurationException('odm checker only supports two arguments');
         }
 
         if (!$config->getArguments()[0] instanceof Client) {
