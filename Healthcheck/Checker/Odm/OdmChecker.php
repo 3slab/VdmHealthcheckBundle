@@ -43,6 +43,6 @@ class OdmChecker extends AbstractChecker
      */
     public function serviceCheck(): bool
     {
-        return $this->client->selectDatabase($this->configuration->getDefaultDB())->command(['ping' => 1]);
+        return $this->client->selectDatabase($this->configuration->getDefaultDB())->command(['ping' => 1]) !== false;
     }
 }
