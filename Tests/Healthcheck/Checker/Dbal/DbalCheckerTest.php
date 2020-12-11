@@ -91,15 +91,40 @@ class DbalCheckerTest extends HealthcheckKernelTestCase
      */
     public function testCheckService(bool $expectedValue, bool $pingReturn)
     {
+        $mockPlatform = $this
+            ->getMockBuilder('Doctrine\DBAL\Platforms\AbstractPlatform')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $mockPlatform
+            ->expects($this->once())
+            ->method('getDummySelectSQL')
+            ->will($this->returnValue('SELECT 1=1'));
+
         $mockConnection = $this
             ->getMockBuilder('Doctrine\DBAL\Connection')
             ->disableOriginalConstructor()
             ->getMock();
 
-        $mockConnection
-            ->expects($this->once())
-            ->method('ping')
-            ->will($this->returnValue($pingReturn));
+        if (method_exists(Connection::class, 'ping')) {
+            $mockConnection
+                ->expects($this->once())
+                ->method('ping')
+                ->will($this->returnValue($pingReturn));
+        } else {
+            $executeQueryMethod = $mockConnection
+                ->expects($this->once())
+                ->method('executeQuery');
+
+            if (!$pingReturn) {
+                $executeQueryMethod->willThrowException(new \Exception());
+            }
+
+            $mockConnection
+                ->expects($this->once())
+                ->method('getDatabasePlatform')
+                ->will($this->returnValue($mockPlatform));
+        }
 
         /** @var Connection $mockConnection */
         $dbalChecker = new DbalChecker($mockConnection);
