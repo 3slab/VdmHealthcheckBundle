@@ -96,11 +96,6 @@ class DbalCheckerTest extends HealthcheckKernelTestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        $mockPlatform
-            ->expects($this->once())
-            ->method('getDummySelectSQL')
-            ->will($this->returnValue('SELECT 1=1'));
-
         $mockConnection = $this
             ->getMockBuilder('Doctrine\DBAL\Connection')
             ->disableOriginalConstructor()
@@ -112,6 +107,11 @@ class DbalCheckerTest extends HealthcheckKernelTestCase
                 ->method('ping')
                 ->will($this->returnValue($pingReturn));
         } else {
+            $mockPlatform
+                ->expects($this->once())
+                ->method('getDummySelectSQL')
+                ->will($this->returnValue('SELECT 1=1'));
+
             $executeQueryMethod = $mockConnection
                 ->expects($this->once())
                 ->method('executeQuery');
