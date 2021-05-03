@@ -1,6 +1,6 @@
 <?php
 
-namespace Vdm\Bundle\HealthcheckBundle\Tests\DependencyInjection\Controller;
+namespace Vdm\Bundle\HealthcheckBundle\Tests\Controller;
 
 use Vdm\Bundle\HealthcheckBundle\Controller\HealthController;
 use Vdm\Bundle\HealthcheckBundle\Healthcheck\CheckManager;

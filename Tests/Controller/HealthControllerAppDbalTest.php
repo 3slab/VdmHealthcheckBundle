@@ -1,6 +1,6 @@
 <?php
 
-namespace Vdm\Bundle\HealthcheckBundle\Tests\DependencyInjection\Controller;
+namespace Vdm\Bundle\HealthcheckBundle\Tests\Controller;
 
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Vdm\Bundle\HealthcheckBundle\Controller\HealthController;
