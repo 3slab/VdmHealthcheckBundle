@@ -16,10 +16,10 @@
   },
   "require": {
     "php": ">=7.2",
-    "symfony/framework-bundle": "^5.0",
-    "symfony/yaml": "^5.0",
-    "symfony/serializer": "^5.0",
-    "symfony/property-access": "^5.0"
+    "symfony/framework-bundle": "^5.4",
+    "symfony/yaml": "^5.4",
+    "symfony/serializer": "^5.4",
+    "symfony/property-access": "^5.4"
   },
   "suggest": {
     "doctrine/dbal": "check a connection to an sql database",
@@ -32,11 +32,11 @@
     "ext-curl": "*",
     "ext-mbstring": "*",
     "ext-sqlite3": "*",
-    "phpunit/phpunit": "^8",
+    "phpunit/phpunit": "^8|^9",
     "squizlabs/php_codesniffer": "3.*",
-    "doctrine/doctrine-bundle": "^2.1",
-    "symfony/browser-kit": "^5.0",
-    "symfony/css-selector": "^5.0",
-    "symfony/http-client": "^5.0"
+    "doctrine/doctrine-bundle": "^2",
+    "symfony/browser-kit": "^5.4",
+    "symfony/css-selector": "^5.4",
+    "symfony/http-client": "^5.4"
   }
 }
