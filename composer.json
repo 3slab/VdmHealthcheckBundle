@@ -7,6 +7,10 @@
     {
       "name": "Jonathan Bouzekri",
       "email": "jonathan.bouzekri@suez.com"
+    },
+    {
+      "name": "Julian Marié",
+      "email": "julian.marie@suez.com"
     }
   ],
   "autoload": {
@@ -16,10 +20,10 @@
   },
   "require": {
     "php": ">=7.2",
-    "symfony/framework-bundle": "^5.4",
-    "symfony/yaml": "^5.4",
-    "symfony/serializer": "^5.4",
-    "symfony/property-access": "^5.4"
+    "symfony/framework-bundle": "^5.4|^6.4",
+    "symfony/yaml": "^5.4|^6.4",
+    "symfony/serializer": "^5.4|^6.4",
+    "symfony/property-access": "^5.4|^6.4"
   },
   "suggest": {
     "doctrine/dbal": "check a connection to an sql database",
